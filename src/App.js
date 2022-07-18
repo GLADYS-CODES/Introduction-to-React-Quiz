@@ -11,13 +11,15 @@ const users = [
   { name: "Jane Doe", id: 2 },
   { name: "Billy Doe", id: 3 }
 ];
-
+const usernames =users.map((user)=>(
+<li key={user.id}> {user.name}</li>
+))
 // comment this out after completion and uncomment code below it to proceed
 function Child() {
   return <div>This is children content</div>;
 }
-/**
-  Challenge: Uncomment this code to complete quiz
+
+  //Challenge: Uncomment this code to complete quiz
 
 function Child() {
   return (
