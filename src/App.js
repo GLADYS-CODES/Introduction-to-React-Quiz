@@ -21,11 +21,12 @@ function Child() {
 
   //Challenge: Uncomment this code to complete quiz
 
-function Child() {
+function Child({setValue}) {
   return (
     <>
       <div>Child</div>
-      <button>Change Parent Value</button>
+     <button onClick={() => setValue("Parent updated")}>Change Parent Value</button>
+      
     </>
   );
 }
@@ -44,36 +45,37 @@ function Parent() {
       </div>
 
       <div className="wrapper">
-        <Child />
+        <Child setValue={setValue}/>
       </div>
     </>
   );
 }
-Uncomment this to tackle quiz
+//Uncomment this to tackle quiz
 **/
 
-// Comment out after completion
-function Parent() {
-  return (
-    <div>
-      <h3>Parent Component</h3>
+//** Comment out after completion
+//function Parent() {
+//  return (
+  //  <div>
+  //    <h3>Parent Component</h3>
     </div>
   );
 }
-// Comment above code after completion
+//** Comment above code after completion
 
 function App() {
-  const [] = React.useState(true);
+  const [show, setShow] = React.useState(true);
   return (
     
     <>
     
     <img src={logo} className="App-logo" alt="logo" />
       <h3>User names</h3>
-      <ul></ul>
-      <button>Hide Element Below</button>
+      <ul>{user names}</ul>
+       <button onClick={()=>setShow(!show)}>{show? "Show Element" : "Hide Element"} </button>
+      
 
-      <div>Toggle Challenge</div>
+     // <div>Toggle Challenge</div>
       <Parent>
       <Child />
     </Parent>
