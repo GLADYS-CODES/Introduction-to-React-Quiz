@@ -12,12 +12,12 @@ const users = [
   { name: "Billy Doe", id: 3 }
 ];
 const usernames =users.map((user)=>(
-<li key={user.id}> {user.name}</li>
+<li key={user.id}> {user.name}</li>;
 ))
 // comment this out after completion and uncomment code below it to proceed
-function Child() {
-  return <div>This is children content</div>;
-}
+//function Child() {
+//  return <div>This is children content</div>;
+//}
 
   //Challenge: Uncomment this code to complete quiz
 
@@ -54,10 +54,11 @@ function Parent() {
 **/
 
 //** Comment out after completion
-//function Parent() {
+//function Parent({children}) {
 //  return (
   //  <div>
   //    <h3>Parent Component</h3>
+{//childern}
     </div>
   );
 }
@@ -70,12 +71,13 @@ function App() {
     <>
     
     <img src={logo} className="App-logo" alt="logo" />
+    <h1>JSX is cool!</h1>
       <h3>User names</h3>
       <ul>{user names}</ul>
        <button onClick={()=>setShow(!show)}>{show? "Show Element" : "Hide Element"} </button>
       
 
-     // <div>Toggle Challenge</div>
+{show && <div>Toggle Challenge</div>}
       <Parent>
       <Child />
     </Parent>
